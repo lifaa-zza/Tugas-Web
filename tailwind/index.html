@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      .grid-item{
+        @apply h-40 border-2 border-purple-500 flex justify-center items-center bg-purple-300 rounded-md
+      }
+
+      .coba-item{
+        @apply h-40 border-2 border-pink-500 flex justify-center items-center bg-pink-300 rounded-md
+      }
+    </style>
+  </head>
+
+  <body>  
+    <div class="bg-red-200  md:bg-pink-200 lg:bg-violet-200 border-violet-400  border-b-4">
+      <div class="sm:flex justify-between container mx-auto py-5">
+        <h1 class="font-bold text-purple-800 text-center">Portofolio Liva</h1>
+        <ul class="flex text-purple-800 space-x-10 justify-center mt-5 sm:mt-0">
+            <li><a href="">About</a></li>
+            <li><a href="">Portofolio</a></li>
+        </ul>
+     </div>
+    </div>  
+
+    <div class="w-2/4 mx-auto my-5 border-2 border-gray-200 min-h-30 min-w-96 p-5 bg-gray-100 rounded-xl">
+        <h3 class= "text-3xl text-center mb-3 pb-3">Hello :D I'm Izzah!</h3>
+         Nama saya Alifah Izzah Rahmadini, bisa dipanggil Izzah. 
+        Tempat/Tanggal lahir saya di Mamuju, 31 Maret 2009. Sekarang 
+        saya berumur 16 tahun. Bersekolah di SMKIT Ibnul Qayyim Makassar, kelas XI-B RPL.
+    </div>
+
+     <h3 class= "text-3xl text-center mb-3 pb-3">Portofolio</h3>
+     <div class="w-4/6 my-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-2xl">
+        <div class="grid-item">Project 1</div>
+        <div class="grid-item">Project 2</div>
+        <div class="grid-item">Project 3</div>
+        <div class="grid-item">Project 4</div>
+        <div class="coba-item">Project 5</div>
+        <div class="coba-item">Project 6</div>
+        <div class="coba-item">Project 7</div>
+        <div class="coba-item">Project 8</div>
+     </div>
+  </body>
+</html>
