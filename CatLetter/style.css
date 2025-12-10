@@ -1,0 +1,290 @@
+body{
+    background-color: #f5f5dc;
+    font-family: "Poppins";
+}
+
+/*NAVBAR*/
+nav{
+    display: flex;
+    align-items: center;
+    background-color: #9d9167;
+}
+
+nav .logo{
+    text-decoration: none;
+    font-family:"poppins";
+    margin-left: 10px;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    margin-left: 450px;
+    gap: 80px;
+}
+
+nav ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 50px;
+}
+
+/*Banner*/
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "poppins";
+    color: white;
+    background-color: #9d9167;
+}
+
+.banner h1{
+    margin-bottom: 10px;
+    margin-top: 95px;
+}
+
+.banner p{
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.banner a button{
+    padding: 10px 23px;
+    background-color: #f5f5dc;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins";
+    margin-bottom: 50px;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+/*Kopi*/
+.coffe-title{
+    text-align: center;
+}
+
+.coffe{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.coffe-line{
+    display: flex;
+}
+
+.coffe-card{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 600px;
+}
+
+.coffe-card img{
+    height: 95px;
+    width: 95px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.coffe-card .coffe-text p{
+    font-size: small;
+}
+
+/*Services*/
+/* BAGIAN UTAMA SECTION */
+.services {
+  text-align: center; /* Supaya judul di tengah */
+  padding: 60px 20px;
+  background-color: #f5f5dc; 
+  font-family: 'Poppins', sans-serif;
+}
+
+/*wrap fotonya*/
+.services-wrap {
+  display: flex; /*biar 3 fotonya sejajar*/
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap; /*supaya kalau di hp itemnya bakal menurun */
+}
+
+/*item fotonya*/
+.services-item {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden; /*gambar di luar batas disembunyikan biar fotonya zoom tapi masih di batas*/
+  transition: transform 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.img-wrap {
+  width: 100%; /*supaya besarnya itu sama sama semua*/
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.img-wrap img {
+  width: 100%; /*supaya lebarnya itu memenuhi isi wrapnya*/
+  height: 100%; /*supaya tingginya itu memenuhi isi wrapnya*/
+  object-fit: cover;
+  filter: blur(3px) brightness(0.7); /*blur*/
+  transition: filter 0.5s ease;
+  will-change: filter, transform; /*blur */
+}
+
+.services-item:hover .img-wrap {
+  transform: scale(1.1); /*buat kasih halus zoomnya*/
+}
+
+.services-item:hover img {
+  filter: blur(0) brightness(1); /*biar nda blur lagi pas hover*/
+}
+.services-wrap:hover .img-wrap img {
+  filter: blur(3px) brightness(0.5); /*supaya pas ada salah satu foto yang diarahkan yang laim bakal menggelap*/
+}
+
+.services-wrap:hover .services-item:hover img {
+  filter: blur(0) brightness(1); /*gambar yang dihover jadi terang dan nda blur*/
+}
+
+
+/*Cerita Kami*/
+.about{
+    text-align: center;
+    font-family: "poppins";
+    color: white;
+    background-color: #9d9167;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Testi kedua*/
+.testi{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.testi-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.testi-card img{
+    width: 180px;
+    border-radius: 50%;
+    padding: 40px;
+    margin-bottom: 0px;
+}
+
+.testi-card button{
+    font-family: "poppins";
+    margin-top: 0%;
+    width: fit-content;
+    align-self: center;
+    background-color: #9d9167;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vh;
+}
+
+.modal-container.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.modal h1{
+    margin: 0;
+}
+
+.modal p{
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/*Footer*/
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.footer-section{
+    max-width: 200%;
+    padding-top: 10px;
+    color: black;
+}
+
+.footer-section h4{
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li{
+    margin-bottom: 5px;
+}
+
+.footer-section a{
+    color: black;
+    text-decoration: none;
+}
+
+.footer-section a:hover{
+    text-decoration: underline;
+}
